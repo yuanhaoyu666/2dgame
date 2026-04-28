@@ -1,0 +1,49 @@
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: #151515;
+  color: #f5efe2;
+  font-family: Inter, "Microsoft YaHei", system-ui, sans-serif;
+  overflow: hidden;
+}
+
+#app {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 25% 15%, rgba(111, 41, 38, 0.28), transparent 28rem),
+    linear-gradient(140deg, #20241e, #14181d 54%, #211a18);
+}
+
+#game {
+  width: min(100vw, calc(100vh * 16 / 9));
+  height: min(100vh, calc(100vw * 9 / 16));
+  image-rendering: pixelated;
+  border: 1px solid rgba(245, 239, 226, 0.18);
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.45);
+  background: #20251f;
+}
+
+#hud {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.overlay-button {
+  pointer-events: auto;
+  border: 0;
+  border-radius: 6px;
+  padding: 12px 18px;
+  color: #191919;
+  background: #f3c96a;
+  font-weight: 800;
+  cursor: pointer;
+}
